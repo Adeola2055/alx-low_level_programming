@@ -6,20 +6,19 @@
 */
 int main(void)
 {
-	int i;
-	unsigned long int a = 1, b = 2, next, sum;
+	unsigned long fib1 = 0, fib2 = 1, fibsum;
+	float tot_sum;
 
-
-	for (i = 1; i <= 33; ++i)
+	while (1)
 	{
-		if (a < 4000000 && (a % 2) == 0)
-		{
-			sum = sum + a;
-		}
-		next = a + b;
-		a = b;
-		b = next;
+		fibsum = fib1 + fib2;
+		if (fibsum > 4000000)
+			break;
+		if ((fibsum % 2) == 0)
+			tot_sum += fibsum;
+		fib1 = fib2;
+		fib2 = fibsum;
 	}
-	printf("%lu\n", sum);
+	printf("%.0f\n", tot_sum);
 	return (0);
 }
