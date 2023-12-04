@@ -12,10 +12,10 @@ int main(void)
 
 	while (x <= 8)
 	{
-		y = 1;
+		y = x + 1;
 		while (y <= 9)
 		{
-			putchar(x + '0'); 
+			putchar(x + '0');
 			putchar(y + '0');
 			if (x != 8 || y != 9)
 			{
