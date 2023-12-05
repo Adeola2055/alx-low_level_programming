@@ -8,6 +8,7 @@ int main(void)
 {
 	int i;
 	char message[] = "_putchar\n";
+
 	i = 0;
 
 	while (message[i] != '\0')
