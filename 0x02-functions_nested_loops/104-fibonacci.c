@@ -11,7 +11,7 @@ int main(void)
 	a = 1, b = 2, i = 0;
 
 	printf("%lu, %lu", a, b);
-	while (i < 95)
+	while (i < 93)
 	{
 		c = a + b;
 		printf(", %lu", c);
