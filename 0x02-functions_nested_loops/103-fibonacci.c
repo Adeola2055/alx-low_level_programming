@@ -10,14 +10,13 @@ int main(void)
 
 	a = 1, b = 2, i = 0, endLoop = 4000000, sum = 0;
 
-	printf("%lu, %lu", a, b);
-	while (i < 48)
+	while (a < endLoop)
 	{
-		c = a + b;
-		if ((c <= endLoop) && (c % 2 == 0))
+		if (a % 2 == 0)
 		{
-			sum += c;
+			sum += a;
 		}
+		c = a + b;
 		a = b;
 		b = c;
 		i++;
