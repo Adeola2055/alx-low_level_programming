@@ -9,18 +9,18 @@ char *leet(char *str)
 {
 	char *r = str;
 	int i = 0;
-	char key[] = {'a', 'e','o', 't', 'l'};
+	char key[] = {'a', 'e', 'o', 't', 'l'};
 	char value[] = {'4', '3', '0', '7', '1'};
 
-	while (*str) 
+	while (*str)
 	{
-		while (i < 5) 
+		while (i < 5)
 		{
-			if ((*str == key[i]) || (*str == key[i] - 32)) 
+			if ((*str == key[i]) || (*str == key[i] - 32))
 			{
 				*str = value[i];
 				break;
-    		}
+			}
 			else
 			{
 				i++;
