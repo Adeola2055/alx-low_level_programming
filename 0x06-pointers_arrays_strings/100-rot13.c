@@ -7,6 +7,7 @@
  */
 char *rot13(char *str)
 {
+	char *p = str;
 	char original[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rotated[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int index = 0;
@@ -24,5 +25,5 @@ char *rot13(char *str)
 		}
 		str++;
 	}
-	return (str);
+	return (p);
 }
