@@ -16,8 +16,10 @@ void print_number(int n)
 	}
 	else
 	{
-		/* Recursive step: Break the number into two parts - the last digit and
-		 * the rest */
+		/*
+		 * Recursive step: Break the number into two parts - the last digit and
+		 * the rest
+		 */
 		print_number(n / 10);
 		/* print the last digit */
 		_putchar(n % 10 + '0');
