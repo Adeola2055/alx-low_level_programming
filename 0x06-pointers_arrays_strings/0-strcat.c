@@ -15,7 +15,6 @@ char *_strcat(char *dest, char *src)
 	{
 		length++;
 	}
-	
 	/* append src to dest */
 	while (*src)
 	{
