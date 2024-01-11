@@ -30,6 +30,6 @@ int is_prime_helper(int n, int divisor)
 	if (n % divisor == 0)
 	{
 		return (0);
-    }
+	}
 	return (is_prime_helper(n, divisor + 1));
 }
