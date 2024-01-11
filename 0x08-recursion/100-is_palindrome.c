@@ -1,3 +1,4 @@
+#include <string.h>
 int is_palindrome_helper(char *s, int start, int end);
 /**
  * is_palindrome - if a string is palindrome
