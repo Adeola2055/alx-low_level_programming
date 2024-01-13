@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _count: print number of cmd argument
+ * _count - print number of cmd argument
  * @argc: number of cmd argument
  */
 void _count(int argc)
