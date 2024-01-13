@@ -1,14 +1,24 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+/**
+ * mul - multiply to numbers
+ * @num1: first operand
+ * @num2: second operand
+ *
+ *
+ * Return: result
+ */
+int mul(int num1, int num2)
+{
+	return (num1 * num2);
+}
 /**
  * main - entry point
- * @argc: number of command line argument
- * @argv: Pointer to cmd value
+ * @argc: number of cmd line argument
+ * @argv: pointer to cmd line argument value
  *
- * Return: 1 if error or 0 otherwise
+ * Return: always 0
  */
-int multiply(int num1, int num2);
-
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
@@ -18,20 +28,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	num1 = atoi(argv[1]); /* convert string to integer */
+	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
-	result = multiply(num1, num2);
+	result = mul(num1, num2);
 	printf("%d\n", result);
 	return (0);
-}
-/**
- * multiply - multiply two numbers
- * @num1: first number
- * @num2: second number
- *
- * Return: result of multiplication
- */
-int multiply(int num1, int num2)
-{
-	return (num1 * num2);
 }
