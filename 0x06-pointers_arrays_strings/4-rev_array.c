@@ -8,7 +8,7 @@ void reverse_array(int *a, int n)
 	int i = 0, r2 = n - 1;
 	char temp;
 
-	while (i < r2)
+	while (i <= r2)
 	{
 		temp = a[i];
 		a[i] = a[r2];
