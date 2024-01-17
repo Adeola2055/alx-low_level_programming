@@ -15,7 +15,10 @@ int _strcmp(char *s1, char *s2)
 			s1++;
 			s2++;
 		}
+		else
+		{
 		return (*s1 - *s2);
+		}
 	}
 	/* check if both strings have reach null terminator */
 	if (*s1 == '\0' && *s2 == '\0')
