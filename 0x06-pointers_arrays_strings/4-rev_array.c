@@ -5,15 +5,15 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i = 0, r2 = n - 1;
-	char temp;
+	int i = 0, end = n - 1;
+	int temp;
 
-	while (i <= r2)
+	while (i < end)
 	{
 		temp = a[i];
-		a[i] = a[r2];
-		a[r2] = temp;
+		a[i] = a[end];
+		a[end] = temp;
 		i++;
-		r2--;
+		end--;
 	}
 }
