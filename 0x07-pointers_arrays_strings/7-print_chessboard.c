@@ -1,19 +1,23 @@
 #include "main.h"
-
 /**
  * print_chessboard - prints the chessboard
- * @a: two dimension array to print
+ * @a: points to an array
  */
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	int row = 0, col;
 
-	for (i = 0; i < 8; i++)
+	/* iterate through rows */
+	while (row < 8)
 	{
-		for (j = 0; j < 8; j++)
+		col = 0;
+		/* iterate through columns */
+		while (col < 8)
 		{
-			_putchar(a[i][j]);
+			_putchar(a[row][col]);/* print the current cell */
+			col++;
 		}
 		_putchar('\n');
+		row++;
 	}
 }
