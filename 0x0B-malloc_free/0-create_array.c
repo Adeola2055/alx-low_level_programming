@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
 /**
@@ -10,19 +9,23 @@
  */
 char *create_array(unsigned int size, char c)
 {
+	unsigned int index = 0;
 	char *ptr;
-	unsigned int i = 0;
 
-	ptr = (char *) malloc(size * sizeof(char));
-	if (ptr == NULL)
+	if (size == 0)
 	{
-		fprintf(stderr, "failed to allocate memory\n");
 		return (NULL);
 	}
-	while (i < size)
+	ptr = (char *) malloc(size * sizeof(char));
+	/* check if the memory allocation is successful */
+	if (ptr == NULL)
 	{
-		ptr[i] = c; /* initialized each array with a specific char */
-		i++;
+		return (NULL);
+	}
+	while (index < size)
+	{
+		ptr[index] = c; /* initialize each array with a specific char */
+		index++;
 	}
 	return (ptr);
 }
