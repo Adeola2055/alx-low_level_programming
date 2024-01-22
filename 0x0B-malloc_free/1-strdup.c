@@ -9,7 +9,6 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	int length = strlen(str) + 1, i = 0;
 
 	if (str == NULL)
 	{
@@ -17,17 +16,15 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		ptr = (char *) malloc(length * sizeof(char));
+		ptr = (char *) malloc((strlen(str) + 1) * sizeof(char));
 		if (ptr == NULL)
 		{
 			return (NULL);
 		}
-		while (i < length)
+		else
 		{
-			ptr[i] = str[i];
-			i++;
+			strcpy(ptr, str);
 		}
-		ptr[i] = '\0';
-		return (ptr);
 	}
+	return (ptr);
 }
