@@ -10,19 +10,30 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
+	char *temp = " ";
 	int length1 = strlen(s1), length2 = strlen(s2);
 
-	if (s1 == NULL)
-		s1 = " ";
-	if (s2 == NULL)
-		s2 = " ";
-	ptr = (char *)malloc(length1 + length2 * sizeof(char) + 1);
+	ptr = (char *) malloc((length1 + length2 + 1) * sizeof(char));
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	strcpy(ptr, s1);
-	strcat(ptr, s2);
+	if (s1 != NULL)
+	{
+		strcat(ptr, s1);
+	}
+	else
+	{
+		strcat(ptr, temp);
+	}
+	if (s2 != NULL)
+	{
+		strcat(ptr, s2);
+	}
+	else
+	{
+		strcat(ptr, temp);
+	}
 	ptr[length1 + length2] = '\0';
 	return (ptr);
 }
