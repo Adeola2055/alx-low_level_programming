@@ -9,8 +9,6 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *_calloc(unsigned int nmemb, unsigned int size)
-{
 	char *block;
 	unsigned int i;
 
