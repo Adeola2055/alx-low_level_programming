@@ -9,22 +9,20 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int index = 0;
-	char *ptr;
+	void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	char *block;
+	unsigned int i;
 
-	if (nmemb == 0 || size == 0 || nmemb > SIZE_MAX /size)
-	{
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	}
-	ptr = (char *) malloc(nmemb * size);
-	if (ptr == NULL)
+	block = malloc(nmemb * size);
+	if (block != NULL)
 	{
+		for (i = 0; i < (nmemb * size); i++)
+			block[i] = 0;
+		return (block);
+	}
+	else
 		return (NULL);
-	}
-	while (index < nmemb)
-	{
-		*(ptr + index * size) = 0;
-		index++;
-	}
-	return (ptr);
 }
