@@ -10,32 +10,32 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len1 = strlen(s1);
-	char *ptr;
-	unsigned int len2;
+	char *concat;
+	unsigned int len = n, index;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
+
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
-	if (n >= strlen(s2))
-	{
-		len2 = strlen(s2);
-	}
-	else
-	{
-		len2 = n;
-	}
-	ptr = (char *)malloc((len1 + len2 + 1) * sizeof(*ptr));
-	if (ptr == NULL)
-	{
+
+	for (index = 0; s1[index]; index++)
+		len++;
+
+	concat = malloc(sizeof(char) * (len + 1));
+
+	if (concat == NULL)
 		return (NULL);
-	}
-	strcpy(ptr, s1);
-	strncat(ptr, s2, n);
-	return (ptr);
+
+	len = 0;
+
+	for (index = 0; s1[index]; index++)
+		concat[len++] = s1[index];
+
+	for (index = 0; s2[index] && index < n; index++)
+		concat[len++] = s2[index];
+
+	concat[len] = '\0';
+
+	return (concat);
 }
