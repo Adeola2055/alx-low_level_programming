@@ -11,7 +11,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub: subtract two number
+ * op_sub - subtract two number
  * @a: first operand
  * @b: second operand
  *
@@ -23,7 +23,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul: multiply two number
+ * op_mul - multiply two number
  * @a: first number
  * @b: second number
  *
@@ -35,7 +35,7 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - divide a number from another 
+ * op_div - divide a number from another
  * @a: first num
  * @b: second num
  *
